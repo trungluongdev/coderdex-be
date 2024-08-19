@@ -110,8 +110,8 @@ router.get("/:pokemonId", (req, res, next) => {
     const previousPokemon = pokemons[prevId];
 
     const newresult = { nextPokemon, pokemon, previousPokemon };
-    const newresultJSON = JSON.stringify(newresult);
-    res.status(200).send(newresultJSON);
+    // const newresultJSON = JSON.stringify(newresult);
+    res.status(200).send({ data: newresult });
   } catch (error) {
     next(error);
   }
